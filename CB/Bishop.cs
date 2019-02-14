@@ -6,6 +6,9 @@ namespace CB
     {
         public Bishop(char[,] keyPad, int validLength) : base(keyPad, validLength) { }
 
+        /// <summary>
+        /// Computes a map of all possible next (neighbor) digits for a given digit
+        /// </summary>
         public override void ComputeValidPathMap()
         {
             for (int i = 0; i <= Rows; i++)

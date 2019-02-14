@@ -28,8 +28,10 @@ namespace CB
 
         public int CountPossibleValidNumbers()
         {
-            this.ComputeValidPathMap();
+            ComputeValidPathMap();
             int resultCount = 0;
+
+            // Count the permutation for 7 digit numbers using the computed Map. Note that first and second positions are restricted to digits 2-9
             for (int i = 2; i < Paths.Count; i++)
             {
                 resultCount += GetCountRec(Paths[i], ValidNumberLength - 1);
